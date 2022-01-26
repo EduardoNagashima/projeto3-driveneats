@@ -18,31 +18,31 @@
         </nav>
     </header>
     <main>
-        <section class="prato">
+        <section class="prato" data-identifier="dishes">
             <p>Primeiro, seu prato</p>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-identifier="food-option" onclick="selecionar()">
                     <img src="images/yakisobna.png" alt="yakisoba">
                     <div class="descricao">
-                        <p>Yakisoba</p>
+                        <p data-identifier="food-title">Yakisoba</p>
                         <span>Prato quente típico da culinária japonesa, suculento e gostoso</span>
-                        <span class="preco">R$ 14,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 14,99</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option" onclick="selecionar()">
                     <img src="images/temaki.jpg" alt="temaki">
                     <div class="descricao">
-                        <p>Temaki</p>
+                        <p data-identifier="food-title">Temaki</p>
                         <span>1/2 folha de alga seca, vai salmão arroz e cream cheese (opcional)</span>
-                        <span class="preco">R$ 6,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 6,99</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option" onclick="selecionar()">
                     <img src="images/combo-sushi.jpg" alt="combo-sushi">
                     <div class="descricao">
-                        <p>Combo Sushi</p>
+                        <p data-identifier="food-title">Combo Sushi</p>
                         <span>4x nigiris, 4x hossomakis, porção de sashimi e o resto (salmão)</span>
-                        <span class="preco">R$ 59,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 59,99</span>
                     </div>
                 </div>
 
@@ -50,31 +50,31 @@
             </div>
         </section>
 
-        <section class="bebida">
+        <section class="bebida" data-identifier="drinks">
             <p>Agora, sua bebida</p>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/pepsi.jpg" alt="pepsi">
                     <div class="descricao">
-                        <p>Pepsi lata</p>
+                        <p data-identifier="food-title">Pepsi lata</p>
                         <span>Lata 350ml</span>
-                        <span class="preco">R$ 2,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 2,99</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/suco-laranja.jpg" alt="suco-de-laranja">
                     <div class="descricao">
-                        <p>Suco de Laranja</p>
+                        <p data-identifier="food-title">Suco de Laranja</p>
                         <span>1 copo (200ml)</span>
-                        <span class="preco">R$ 10,00</span>
+                        <span class="preco" data-identifier="food-price">R$ 10,00</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/combo-corona.jpg" alt="combo-corona">
                     <div class="descricao">
-                        <p>Combo Corona</p>
+                        <p data-identifier="food-title">Combo Corona</p>
                         <span>6 longnecks Corona</span>
-                        <span class="preco">R$ 49,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 49,99</span>
                     </div>
                 </div>
 
@@ -82,31 +82,31 @@
             </div>
         </section>
 
-        <section class="sobremesa">
+        <section class="sobremesa" data-identifier="desserts">
             <p>Por fim, sua sobremesa</p>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/macaron.jpg" alt="macaron">
                     <div class="descricao">
-                        <p>Macaron</p>
+                        <p data-identifier="food-title">Macaron</p>
                         <span>sobremesa francesa famosa por seu gosto único (unid.)</span>
-                        <span class="preco">R$ 16,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 16,99</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/mille-feuille.jpg" alt="temaki">
                     <div class="descricao">
-                        <p>Mille feuille</p>
+                        <p data-identifier="food-title">Mille feuille</p>
                         <span>milhares de camadas de massa folhada (creme de baunilha)</span>
-                        <span class="preco">R$ 29,99</span>
+                        <span class="preco" data-identifier="food-price">R$ 29,99</span>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-identifier="food-option">
                     <img src="images/brigadeiro.jpg" alt="brigadeiro-gourmet">
                     <div class="descricao">
-                        <p>Brigadeiro Gourmet</p>
+                        <p data-identifier="food-title">Brigadeiro Gourmet</p>
                         <span>experiência de provar o típico doce nacional adaptado (unid.)</span>
-                        <span class="preco">R$ 99,90</span>
+                        <span class="preco" data-identifier="food-price">R$ 99,90</span>
                     </div>
                 </div>
 
@@ -115,9 +115,9 @@
         </section>
     </main>
     <footer>
-        <div>
-            Selecione os 3 itens <br> para fechar o pedido
-        </div>
+        <button>
+                Selecione os 3 itens <br> para fechar o pedido
+            </button>
     </footer>
 
     <script src="scripts/scripts.js"></script>
