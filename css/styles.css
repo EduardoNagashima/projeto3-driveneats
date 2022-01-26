@@ -40,6 +40,8 @@ nav p {
 main {
     width: 414px;
     padding-top: 130px;
+    /* ---------- Não sei porque, mas só funciona position sticky no footer se tiver esse padding-bottom >= 1px  ------------------- */
+    padding-bottom: 1px;
     background-color: #E5E5E5;
 }
 
@@ -117,19 +119,25 @@ section p {
 footer {
     background-color: #FFFFFF;
     height: 92px;
-    width: 100%;
+    width: 414px;
     position: sticky;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer div {
-    margin: 15px 25px;
-    padding: 10px;
-    border-radius: 50px;
     background-color: #CBCBCB;
+    margin: 15px 25px;
+    width: 364px;
+    height: 61px;
     font-size: 20px;
-    font-weight: 400;
+    border-radius: 50px;
+    text-align: center;
     color: #FFFFFF;
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
 }
