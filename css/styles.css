@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 body {
-    background-color: #E5E5E5;
-    width: 414px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -15,7 +13,7 @@ header {
     background-color: #CF2B2B;
     position: fixed;
     top: 0;
-    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 nav {
@@ -40,9 +38,9 @@ nav p {
 /* ---------------------------------CONTEUDO------------------------------ */
 
 main {
-    margin-top: 123px;
-    width: 100%;
-    height: 100%;
+    width: 414px;
+    padding-top: 130px;
+    background-color: #E5E5E5;
 }
 
 section {
@@ -62,9 +60,10 @@ section p {
 .cards {
     margin-bottom: 27px;
     width: 100%;
-    overflow: scroll;
     display: flex;
     flex-direction: row;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .card {
@@ -75,7 +74,7 @@ section p {
     flex-direction: column;
     align-items: center;
     border-radius: 9px;
-    box-shadow: rgba(0, 0, 0, 0.7)
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
 
 .card img {
@@ -110,4 +109,27 @@ section p {
     color: #000000;
     font-weight: 400;
     margin-bottom: 13px;
+}
+
+
+/* ------------------------------------- RODAPÉ ------------------------------------- */
+
+footer {
+    background-color: #FFFFFF;
+    height: 92px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+footer div {
+    margin: 15px 25px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #CBCBCB;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: flex;
+    text-align: center;
 }
