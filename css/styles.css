@@ -145,3 +145,14 @@ footer button {
     font-weight: 400;
     border: none;
 }
+
+
+/* ------------------------------------- SCRIPTS ------------------------------------- */
+
+.selecionado {
+    border: 4px solid #32B72F;
+}
+
+.fechar-pedido {
+    background-color: #32B72F;
+}

@@ -21,7 +21,7 @@
         <section class="prato" data-identifier="dishes">
             <p>Primeiro, seu prato</p>
             <div class="cards">
-                <div class="card" data-identifier="food-option" onclick="selecionar()">
+                <div class="card" data-identifier="food-option" onclick="selecionarPrato1()">
                     <img src="images/yakisobna.png" alt="yakisoba">
                     <div class="descricao">
                         <p data-identifier="food-title">Yakisoba</p>
@@ -29,7 +29,7 @@
                         <span class="preco" data-identifier="food-price">R$ 14,99</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option" onclick="selecionar()">
+                <div class="card" data-identifier="food-option" onclick="selecionarPrato2()">
                     <img src="images/temaki.jpg" alt="temaki">
                     <div class="descricao">
                         <p data-identifier="food-title">Temaki</p>
@@ -37,7 +37,7 @@
                         <span class="preco" data-identifier="food-price">R$ 6,99</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option" onclick="selecionar()">
+                <div class="card" data-identifier="food-option" onclick="selecionarPrato3()">
                     <img src="images/combo-sushi.jpg" alt="combo-sushi">
                     <div class="descricao">
                         <p data-identifier="food-title">Combo Sushi</p>
@@ -53,7 +53,7 @@
         <section class="bebida" data-identifier="drinks">
             <p>Agora, sua bebida</p>
             <div class="cards">
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarBebida1()">
                     <img src="images/pepsi.jpg" alt="pepsi">
                     <div class="descricao">
                         <p data-identifier="food-title">Pepsi lata</p>
@@ -61,7 +61,7 @@
                         <span class="preco" data-identifier="food-price">R$ 2,99</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarBebida2()">
                     <img src="images/suco-laranja.jpg" alt="suco-de-laranja">
                     <div class="descricao">
                         <p data-identifier="food-title">Suco de Laranja</p>
@@ -69,7 +69,7 @@
                         <span class="preco" data-identifier="food-price">R$ 10,00</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarBebida3()">
                     <img src="images/combo-corona.jpg" alt="combo-corona">
                     <div class="descricao">
                         <p data-identifier="food-title">Combo Corona</p>
@@ -85,7 +85,7 @@
         <section class="sobremesa" data-identifier="desserts">
             <p>Por fim, sua sobremesa</p>
             <div class="cards">
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarSobremesa1()">
                     <img src="images/macaron.jpg" alt="macaron">
                     <div class="descricao">
                         <p data-identifier="food-title">Macaron</p>
@@ -93,7 +93,7 @@
                         <span class="preco" data-identifier="food-price">R$ 16,99</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarSobremesa2()">
                     <img src="images/mille-feuille.jpg" alt="temaki">
                     <div class="descricao">
                         <p data-identifier="food-title">Mille feuille</p>
@@ -101,7 +101,7 @@
                         <span class="preco" data-identifier="food-price">R$ 29,99</span>
                     </div>
                 </div>
-                <div class="card" data-identifier="food-option">
+                <div class="card" data-identifier="food-option" onclick="selecionarSobremesa3()">
                     <img src="images/brigadeiro.jpg" alt="brigadeiro-gourmet">
                     <div class="descricao">
                         <p data-identifier="food-title">Brigadeiro Gourmet</p>
@@ -115,11 +115,10 @@
         </section>
     </main>
     <footer>
-        <button>
+        <button class="confirmar">
                 Selecione os 3 itens <br> para fechar o pedido
             </button>
     </footer>
-
     <script src="scripts/scripts.js"></script>
 </body>
 
