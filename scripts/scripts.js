@@ -1,125 +1,76 @@
-function selecionarPrato1() {
-    let prato = document.querySelectorAll(".prato .card");
-    if (prato[0].classList.contains("selecionado") == false) {
-        prato[0].classList.add("selecionado");
-        prato[1].classList.remove("selecionado");
-        prato[2].classList.remove("selecionado");
+let nomePrato = null;
+let precoPrato = null;
+
+let nomeBebida = null;
+let precoBebida = null;
+
+let nomeSobremesa = null;
+let precoSobremesa = null;
+
+let soma = 0;
+
+function selecionarPrato(pratoEscolhido, nome, preco) {
+    let prato = document.querySelector("." + pratoEscolhido);
+    let selecionado = document.querySelector(".prato .selecionado");
+    if (selecionado !== null) {
+        selecionado.classList.remove("selecionado");
     }
-    fecharPedido();
+    nomePrato = nome;
+    precoPrato = preco;
+    prato.classList.add("selecionado");
+    checkout();
 }
 
-function selecionarPrato2() {
-    let prato = document.querySelectorAll(".prato .card");
-    if (prato[1].classList.contains("selecionado") == false) {
-        prato[1].classList.add("selecionado");
-        prato[0].classList.remove("selecionado");
-        prato[2].classList.remove("selecionado");
+function selecionarBebida(bebidaEscolhida, nome, preco) {
+    let bebida = document.querySelector("." + bebidaEscolhida);
+    let selecionado = document.querySelector(".bebida .selecionado");
+
+    if (selecionado !== null) {
+        selecionado.classList.remove("selecionado")
     }
-    fecharPedido();
+    bebida.classList.add("selecionado");
+    nomeBebida = nome;
+    precoBebida = preco;
+    checkout();
 }
 
-function selecionarPrato3() {
-    let prato = document.querySelectorAll(".prato .card");
-    if (prato[2].classList.contains("selecionado") == false) {
-        prato[2].classList.add("selecionado");
-        prato[1].classList.remove("selecionado");
-        prato[0].classList.remove("selecionado");
+function selecionarSobremesa(sobremesaEscolhida, nome, preco) {
+    let sobremesa = document.querySelector('.' + sobremesaEscolhida);
+    let selecionado = document.querySelector('.sobremesa .selecionado');
+    if (selecionado !== null) {
+        selecionado.classList.remove('selecionado');
     }
-    fecharPedido();
+    sobremesa.classList.add('selecionado');
+    nomeSobremesa = nome;
+    precoSobremesa = preco;
+    checkout();
 }
 
-function selecionarBebida1() {
-    let bebida = document.querySelectorAll(".bebida .card");
-    if (bebida[0].classList.contains("selecionado") == false) {
-        bebida[0].classList.add("selecionado");
-        bebida[1].classList.remove("selecionado");
-        bebida[2].classList.remove("selecionado");
-    }
-    fecharPedido();
-}
+function checkout() {
+    if (nomePrato !== null && nomeBebida !== null && nomeSobremesa !== null) {
 
-function selecionarBebida2() {
-    let bebida = document.querySelectorAll(".bebida .card");
-    if (bebida[1].classList.contains("selecionado") == false) {
-        bebida[1].classList.add("selecionado");
-        bebida[0].classList.remove("selecionado");
-        bebida[2].classList.remove("selecionado");
-    }
-    fecharPedido();
-}
+        let confirmar = document.querySelector(".confirmar");
+        confirmar.classList.add('fechar-pedido');
+        confirmar.innerHTML = 'Fechar Pedido';
 
-function selecionarBebida3() {
-    let bebida = document.querySelectorAll(".bebida .card");
-    if (bebida[2].classList.contains("selecionado") == false) {
-        bebida[2].classList.add("selecionado");
-        bebida[1].classList.remove("selecionado");
-        bebida[0].classList.remove("selecionado");
     }
-    fecharPedido();
-}
-
-function selecionarSobremesa1() {
-    let sobremesa = document.querySelectorAll(".sobremesa .card");
-    if (sobremesa[0].classList.contains("selecionado") == false) {
-        sobremesa[0].classList.add("selecionado");
-        sobremesa[1].classList.remove("selecionado");
-        sobremesa[2].classList.remove("selecionado");
-    }
-    fecharPedido();
-}
-
-function selecionarSobremesa2() {
-    let sobremesa = document.querySelectorAll(".sobremesa .card");
-    if (sobremesa[1].classList.contains("selecionado") == false) {
-        sobremesa[1].classList.add("selecionado");
-        sobremesa[0].classList.remove("selecionado");
-        sobremesa[2].classList.remove("selecionado");
-    }
-    fecharPedido();
-}
-
-function selecionarSobremesa3() {
-    let sobremesa = document.querySelectorAll(".sobremesa .card");
-    if (sobremesa[2].classList.contains("selecionado") == false) {
-        sobremesa[2].classList.add("selecionado");
-        sobremesa[1].classList.remove("selecionado");
-        sobremesa[0].classList.remove("selecionado");
-    }
-    fecharPedido();
 }
 
 function fecharPedido() {
-    let pratoSelecionado = false;
-    let bebidaSelecionada = false;
-    let sobremesaSelecionada = false;
+    soma = 0;
+    let fecharPedido = document.querySelector('.fechar-pedido');
 
-    let prato = document.querySelectorAll(".prato .card");
-    prato.forEach(prato => {
-        if (prato.classList.contains("selecionado")) {
-            pratoSelecionado = true;
+    if (fecharPedido !== null) {
+        soma = (precoBebida + precoPrato + precoSobremesa);
+        soma = soma.toFixed(2);
+        let escondido = document.querySelector('.escondido');
+        escondido.classList.remove('escondido');
 
-        }
-    });
 
-    let bebida = document.querySelectorAll(".bebida .card");
-    bebida.forEach(bebida => {
-        if (bebida.classList.contains("selecionado")) {
-            bebidaSelecionada = true;
-
-        }
-    });
-
-    let sobremesa = document.querySelectorAll(".sobremesa .card");
-    sobremesa.forEach(sobremesa => {
-        if (sobremesa.classList.contains("selecionado")) {
-            sobremesaSelecionada = true;
-
-        }
-    });
-
-    if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
-        let botaoConfirmar = document.querySelector(".confirmar");
-        botaoConfirmar.innerHTML = "Fechar Pedido"
-        botaoConfirmar.classList.add("fechar-pedido");
+        return soma;
     }
+    //CRIAR NO HTML / CSS O CHECKOUT E DEIXAR ELE INVISIVEl, DEIXAR VISIVEL APENAS QUANDO CLICAR EM FECHAR PEDIDO
+    // Usar soma só quando for apertar o botão!
+    // soma = parseInt(precoBebida + precoPrato + precoSobremesa);
+
 }
