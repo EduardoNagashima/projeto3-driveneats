@@ -72,5 +72,5 @@ function fecharPedido() {
     //CRIAR NO HTML / CSS O CHECKOUT E DEIXAR ELE INVISIVEl, DEIXAR VISIVEL APENAS QUANDO CLICAR EM FECHAR PEDIDO
     // Usar soma só quando for apertar o botão!
     // soma = parseInt(precoBebida + precoPrato + precoSobremesa);
-
+    //a
 }
