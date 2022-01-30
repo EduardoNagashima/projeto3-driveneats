@@ -19,6 +19,12 @@
 }
 
 @media (max-width:500px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
     .confirmar-pedido {
         position: fixed;
         width: 100%;
@@ -82,12 +88,6 @@
     .aviso {
         display: none;
     }
-    * {
-        box-sizing: border-box;
-    }
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
     /* ------------------------CABEÇALHO----------------------- */
     header {
         width: 100vw;
@@ -116,7 +116,7 @@
     main {
         width: 100%;
         padding-top: 130px;
-        /* ---------- Não sei porque, mas só funciona position sticky no footer se tiver esse padding-bottom >= 1px  ------------------- */
+        /* ------ Não sei porque, mas só funciona position sticky no footer se tiver esse padding-bottom >= 1px  - */
         padding-bottom: 1px;
         background-color: #E5E5E5;
     }
