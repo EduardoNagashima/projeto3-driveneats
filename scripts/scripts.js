@@ -1,4 +1,10 @@
-let nomePrato, preciPrato, nomeBebida, precoBebida, nomeSobremesa, precoSobremesa, soma = null;
+let nomePrato = null;
+let preciPrato = null;
+let nomeBebida = null;
+let precoBebida = null;
+let nomeSobremesa = null;
+let precoSobremesa = null;
+let soma = null;
 
 function selecionarPrato(pratoEscolhido, nome, preco) {
     let prato = document.querySelector('.' + pratoEscolhido);
