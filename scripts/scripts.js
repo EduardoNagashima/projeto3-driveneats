@@ -1,37 +1,54 @@
 let nomePrato, preciPrato, nomeBebida, precoBebida, nomeSobremesa, precoSobremesa, soma = null;
 
 function selecionarPrato(pratoEscolhido, nome, preco) {
-    let prato = document.querySelector("." + pratoEscolhido);
-    let selecionado = document.querySelector(".prato .selecionado");
+    let prato = document.querySelector('.' + pratoEscolhido);
+    let check = document.querySelector('.' + pratoEscolhido + ' ion-icon');
+    let checkado = document.querySelector('.prato .check');
+    let selecionado = document.querySelector('.prato .selecionado');
+
     if (selecionado !== null) {
-        selecionado.classList.remove("selecionado");
+        selecionado.classList.remove('selecionado');
+        checkado.classList.remove('check');
     }
+
     nomePrato = nome;
     precoPrato = preco.toFixed(2);
     prato.classList.add("selecionado");
+    check.classList.add("check");
     checkout();
 }
 
 function selecionarBebida(bebidaEscolhida, nome, preco) {
-    let bebida = document.querySelector("." + bebidaEscolhida);
-    let selecionado = document.querySelector(".bebida .selecionado");
+    let bebida = document.querySelector('.' + bebidaEscolhida);
+    let check = document.querySelector('.' + bebidaEscolhida + ' ion-icon');
+    let checkado = document.querySelector('.bebida .check');
+    let selecionado = document.querySelector('.bebida .selecionado');
 
     if (selecionado !== null) {
-        selecionado.classList.remove("selecionado")
+        selecionado.classList.remove('selecionado');
+        checkado.classList.remove('check');
     }
-    bebida.classList.add("selecionado");
+    bebida.classList.add('selecionado');
+    check.classList.add('check');
     nomeBebida = nome;
     precoBebida = preco.toFixed(2);
+
+
     checkout();
 }
 
 function selecionarSobremesa(sobremesaEscolhida, nome, preco) {
     let sobremesa = document.querySelector('.' + sobremesaEscolhida);
     let selecionado = document.querySelector('.sobremesa .selecionado');
+    let checkado = document.querySelector('.sobremesa .check');
+    let check = document.querySelector('.' + sobremesaEscolhida + ' ion-icon');
+
     if (selecionado !== null) {
         selecionado.classList.remove('selecionado');
+        checkado.classList.remove('check');
     }
     sobremesa.classList.add('selecionado');
+    check.classList.add('check');
     nomeSobremesa = nome;
     precoSobremesa = preco.toFixed(2);
     checkout();
