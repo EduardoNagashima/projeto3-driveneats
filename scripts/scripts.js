@@ -75,7 +75,17 @@ function fecharPedido() {
 
         let escondido = document.querySelector('.escondido');
         escondido.classList.remove('escondido');
+
+
     }
+}
+
+function pedir() {
+    nome = prompt('Qual é o seu nome?');
+    endereco = prompt('Qual é seu endereço?');
+
+    msg = encodeURIComponent('Olá, me chamo ' + nome + ' e moro em ' + endereco + ' gostaria de fazer o pedido:' + '\n' + '- Prato: ' + nomePrato + '\n' + '- Bebida: ' + nomeBebida + '\n' + '- Sobremesa: ' + nomeSobremesa + '\n' + 'Total: R$ ' + soma);
+    window.open('https://wa.me/5544999931650?text=' + msg);
 }
 
 function cancelar() {
