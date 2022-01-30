@@ -79,22 +79,22 @@ function fecharPedido() {
         prato.innerHTML = nomePrato;
 
         valorPrato = document.querySelector('.prato-pedido .precoPrato');
-        valorPrato.innerHTML = ('R$ ' + precoPrato);
+        valorPrato.innerHTML = (precoPrato.replace('.', ','));
 
         bebida = document.querySelector('.bebida-pedido .bebida');
         bebida.innerHTML = nomeBebida;
 
         valorBebida = document.querySelector('.bebida-pedido .precoBebida');
-        valorBebida.innerHTML = ('R$ ' + precoBebida);
+        valorBebida.innerHTML = (precoBebida.replace('.', ','));
 
         sobremesa = document.querySelector('.sobremesa-pedido .sobremesa');
         sobremesa.innerHTML = nomeSobremesa;
 
         valorSobremesa = document.querySelector('.sobremesa-pedido .precoSobremesa');
-        valorSobremesa.innerHTML = ('R$ ' + precoSobremesa);
+        valorSobremesa.innerHTML = (precoSobremesa.replace('.', ','));
 
         precoTotal = document.querySelector('.total-pedido .precoTotal');
-        precoTotal.innerHTML = ('R$ ' + soma.toFixed(2));
+        precoTotal.innerHTML = ('R$ ' + soma.toFixed(2).replace('.', ','));
 
         let escondido = document.querySelector('.escondido');
         escondido.classList.remove('escondido');
@@ -107,7 +107,7 @@ function pedir() {
     nome = prompt('Qual é o seu nome?');
     endereco = prompt('Qual é seu endereço?');
 
-    msg = encodeURIComponent('Olá, me chamo ' + nome + ' e moro em ' + endereco + ' gostaria de fazer o pedido:' + '\n' + '- Prato: ' + nomePrato + '\n' + '- Bebida: ' + nomeBebida + '\n' + '- Sobremesa: ' + nomeSobremesa + '\n' + 'Total: R$ ' + soma);
+    msg = encodeURIComponent('Olá, gostaria de fazer o pedido:' + '\n' + '- Prato: ' + nomePrato + '\n' + '- Bebida: ' + nomeBebida + '\n' + '- Sobremesa: ' + nomeSobremesa + '\n' + 'Total: R$ ' + soma.toFixed(2) + '\n' + '\n' + 'Nome: ' + nome + '\n' + 'Endereço: ' + endereco);
     window.open('https://wa.me/5544999931650?text=' + msg);
 }
 

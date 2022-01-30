@@ -34,7 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 2;
+        z-index: 3;
     }
     .confirmar-pedido-box {
         color: #FFFFFF;
@@ -43,6 +43,7 @@
         background-color: #50D074;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
         border-radius: 9px;
+        z-index: 3;
     }
     .confirmar-pedido-box p {
         font-size: 22px;
@@ -74,6 +75,9 @@
     .confirmar-pedido .confirmar-pedido-box span {
         font-weight: 400;
         font-size: 22px;
+    }
+    .confirmar-pedido .confirmar-pedido-box .total-pedido span {
+        font-weight: 700;
     }
     .confirmar-pedido-box .cancelar {
         background-color: #50D074;
@@ -136,18 +140,17 @@
     .cards {
         margin-bottom: 27px;
         display: flex;
-        flex-direction: row;
         overflow-x: scroll;
     }
     .card {
         display: flex;
+        align-items: center;
         position: relative;
         margin-right: 16px;
         background-color: #FFFFFF;
         flex-direction: column;
-        align-items: center;
         border-radius: 9px;
-        border: 4px solid #FFFFFF;
+        border: 6px solid #FFFFFF;
         box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     }
     .card img {
@@ -173,7 +176,6 @@
     }
     .card .descricao .preco {
         margin-top: 10px;
-        margin-bottom: 10px;
         display: block;
         font-size: 16px;
         color: #000000;
@@ -208,7 +210,7 @@
     }
     /* ------------------------------------- SCRIPTS ------------------------------------- */
     .selecionado {
-        border: 4px solid #32B72F;
+        border: 6px solid #32B72F;
     }
     .fechar-pedido {
         background-color: #32B72F;
@@ -220,7 +222,7 @@
         color: #32B72F;
         font-size: 20px;
         position: absolute;
-        bottom: 10px;
+        bottom: 14px;
         right: 10px;
         z-index: 1;
     }
