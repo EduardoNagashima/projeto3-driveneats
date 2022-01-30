@@ -14,6 +14,10 @@
     text-align: center;
 }
 
+.confirmar-pedido {
+    display: none;
+}
+
 @media (max-width:500px) {
     .confirmar-pedido {
         position: fixed;
@@ -22,40 +26,55 @@
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
         align-items: center;
+        justify-content: center;
         z-index: 2;
     }
     .confirmar-pedido-box {
-        margin: 0 auto;
-        z-index: 3;
-        width: 377px;
+        color: #FFFFFF;
+        width: 90vw;
         height: 353px;
-        left: 19px;
-        z-index: 2;
         background-color: #50D074;
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
         border-radius: 9px;
-        display: flex;
-        justify-content: center;
     }
-    .confirmar-pedido-box div {
+    .confirmar-pedido-box p {
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 21px;
+        margin-bottom: 28px;
+    }
+    .confirmar-pedido .confirmar-pedido-box div {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        margin: 0 25px 13px 25px;
     }
     .confirmar-pedido-box button {
         color: #50D074;
         font-size: 22px;
         font-weight: 700;
-        position: absolute;
-        width: 329px;
+        width: 85vw;
         height: 52px;
         background: #FFFFFF;
         border: none;
         border-radius: 100px;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .confirmar-pedido-box {
-        border: hidden;
+    .confirmar-pedido .confirmar-pedido-box span {
+        font-weight: 400;
+        font-size: 22px;
+    }
+    .confirmar-pedido-box .cancelar {
+        background-color: #50D074;
         color: #FFFFFF;
+        font-size: 22px;
+        font-weight: 700;
+        width: 30vw;
+        height: 30px;
     }
     .escondido {
         display: none;
@@ -95,7 +114,7 @@
     }
     /* ---------------------------------CONTEUDO------------------------------ */
     main {
-        width: 100vw;
+        width: 100%;
         padding-top: 130px;
         /* ---------- Não sei porque, mas só funciona position sticky no footer se tiver esse padding-bottom >= 1px  ------------------- */
         padding-bottom: 1px;
@@ -161,7 +180,7 @@
     footer {
         background-color: #FFFFFF;
         height: 92px;
-        width: 100vw;
+        width: 100%;
         position: sticky;
         bottom: 0;
         display: flex;
@@ -190,5 +209,4 @@
     .fechar-pedido {
         background-color: #32B72F;
     }
-    /* //a */
 }

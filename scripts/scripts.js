@@ -69,8 +69,11 @@ function fecharPedido() {
 
         return soma;
     }
-    //CRIAR NO HTML / CSS O CHECKOUT E DEIXAR ELE INVISIVEl, DEIXAR VISIVEL APENAS QUANDO CLICAR EM FECHAR PEDIDO
-    // Usar soma só quando for apertar o botão!
-    // soma = parseInt(precoBebida + precoPrato + precoSobremesa);
-    //a
+
+
+}
+
+function cancelar() {
+    let cancelar = document.querySelector(".confirmar-pedido");
+    cancelar.classList.toggle('escondido');
 }
