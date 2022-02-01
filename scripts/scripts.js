@@ -89,13 +89,13 @@ function pedir() {
     nome = prompt('Qual é o seu nome?');
     endereco = prompt('Qual é seu endereço?');
 
-    msg = encodeURIComponent('Olá, gostaria de fazer o pedido:' + '\n' + '- Prato: ' + nomePrato + '\n' + '- Bebida: ' + nomeBebida + '\n' + '- Sobremesa: ' + nomeSobremesa + '\n' + 'Total: R$ ' + soma.toFixed(2) + '\n' + '\n' + 'Nome: ' + nome + '\n' + 'Endereço: ' + endereco);
+    msg = encodeURIComponent(`Olá, gostaria de fazer o pedido: \n- Prato:  ${nomePrato}  \n- Bebida: ${nomeBebida} \n- Sobremesa: ${nomeSobremesa} \nTotal: R$ ${soma.toFixed(2)}\n \n Nome: ${nome} \n Endereço: ${endereco}`);
     window.open('https://wa.me/5544999931650?text=' + msg);
 }
 
 function desmarcar(item) {
-    let selecionado = document.querySelector('.' + item + ' .selecionado');
-    let checkado = document.querySelector('.' + item + ' .check');
+    let selecionado = document.querySelector(`.${item} .selecionado`);
+    let checkado = document.querySelector(`.${item}  .check`);
     if (selecionado !== null) {
         selecionado.classList.remove('selecionado');
         checkado.classList.remove('check');
