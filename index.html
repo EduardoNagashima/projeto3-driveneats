@@ -48,7 +48,7 @@
         <section class="prato" data-identifier="dishes">
             <p>Primeiro, seu prato</p>
             <div class="cards">
-                <div class="card yakisoba" data-identifier="food-option" onclick="selecionarPrato('yakisoba', 'Yakisoba', 14.99)">
+                <div class="card yakisoba" data-identifier="food-option" onclick="selecionarPrato(this, 'Yakisoba', 14.99)">
                     <img src="images/yakisobna.png" alt="yakisoba">
                     <div class="descricao">
                         <p data-identifier="food-title">Yakisoba</p>
@@ -57,7 +57,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card temaki" data-identifier="food-option" onclick="selecionarPrato('temaki', 'Temaki', 6.99)">
+                <div class="card temaki" data-identifier="food-option" onclick="selecionarPrato(this, 'Temaki', 6.99)">
                     <img src="images/temaki.jpg" alt="temaki">
                     <div class="descricao">
                         <p data-identifier="food-title">Temaki</p>
@@ -66,7 +66,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card combo-sushi" data-identifier="food-option" onclick="selecionarPrato('combo-sushi', 'Combo Sushi', 59.99)">
+                <div class="card combo-sushi" data-identifier="food-option" onclick="selecionarPrato(this, 'Combo Sushi', 59.99)">
                     <img src="images/combo-sushi.jpg" alt="combo-sushi">
                     <div class="descricao">
                         <p data-identifier="food-title">Combo Sushi</p>
@@ -81,7 +81,7 @@
         <section class="bebida" data-identifier="drinks">
             <p>Agora, sua bebida</p>
             <div class="cards">
-                <div class="card pepsi" data-identifier="food-option" onclick="selecionarBebida('pepsi', 'Pepsi', 2.99)">
+                <div class="card pepsi" data-identifier="food-option" onclick="selecionarBebida(this, 'Pepsi', 2.99)">
                     <img src="images/pepsi.jpg" alt="pepsi">
                     <div class="descricao">
                         <p data-identifier="food-title">Pepsi lata</p>
@@ -90,7 +90,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card suco" data-identifier="food-option" onclick="selecionarBebida('suco','Suco de Laranja',10.00)">
+                <div class="card suco" data-identifier="food-option" onclick="selecionarBebida(this,'Suco de Laranja',10.00)">
                     <img src="images/suco-laranja.jpg" alt="suco-de-laranja">
                     <div class="descricao">
                         <p data-identifier="food-title">Suco de Laranja</p>
@@ -99,7 +99,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card corona" data-identifier="food-option" onclick="selecionarBebida('corona','Combo Corona', 49.99)">
+                <div class="card corona" data-identifier="food-option" onclick="selecionarBebida(this,'Combo Corona', 49.99)">
                     <img src="images/combo-corona.jpg" alt="combo-corona">
                     <div class="descricao">
                         <p data-identifier="food-title">Combo Corona</p>
@@ -114,7 +114,7 @@
         <section class="sobremesa" data-identifier="desserts">
             <p>Por fim, sua sobremesa</p>
             <div class="cards">
-                <div class="card macaron" data-identifier="food-option" onclick="selecionarSobremesa('macaron', 'Macaron', 16.99)">
+                <div class="card macaron" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Macaron', 16.99)">
                     <img src="images/macaron.jpg" alt="macaron">
                     <div class="descricao">
                         <p data-identifier="food-title">Macaron</p>
@@ -123,7 +123,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card mille-feuille" data-identifier="food-option" onclick="selecionarSobremesa('mille-feuille', 'Mille Feuille', 29.99)">
+                <div class="card mille-feuille" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Mille Feuille', 29.99)">
                     <img src="images/mille-feuille.jpg" alt="Mille-Feuille">
                     <div class="descricao">
                         <p data-identifier="food-title">Mille feuille</p>
@@ -132,7 +132,7 @@
                     </div>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="card brigadeiro" data-identifier="food-option" onclick="selecionarSobremesa('brigadeiro', 'Brigadeiro', 99.99)">
+                <div class="card brigadeiro" data-identifier="food-option" onclick="selecionarSobremesa(this, 'Brigadeiro', 99.99)">
                     <img src="images/brigadeiro.jpg" alt="brigadeiro-gourmet">
                     <div class="descricao">
                         <p data-identifier="food-title">Brigadeiro Gourmet</p>

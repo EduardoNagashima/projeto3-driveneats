@@ -6,58 +6,40 @@ let nomeSobremesa = null;
 let precoSobremesa = null;
 let soma = null;
 
-function selecionarPrato(pratoEscolhido, nome, preco) {
-    let prato = document.querySelector('.' + pratoEscolhido);
-    let check = document.querySelector('.' + pratoEscolhido + ' ion-icon');
-    let checkado = document.querySelector('.prato .check');
-    let selecionado = document.querySelector('.prato .selecionado');
-
-    if (selecionado !== null) {
-        selecionado.classList.remove('selecionado');
-        checkado.classList.remove('check');
-    }
+function selecionarPrato(div, nome, preco) {
+    desmarcar('prato');
+    selecionar(div);
 
     nomePrato = nome;
     precoPrato = preco.toFixed(2);
-    prato.classList.add("selecionado");
-    check.classList.add("check");
+
     checkout();
 }
 
-function selecionarBebida(bebidaEscolhida, nome, preco) {
-    let bebida = document.querySelector('.' + bebidaEscolhida);
-    let check = document.querySelector('.' + bebidaEscolhida + ' ion-icon');
-    let checkado = document.querySelector('.bebida .check');
-    let selecionado = document.querySelector('.bebida .selecionado');
+function selecionarBebida(div, nome, preco) {
+    desmarcar('bebida');
+    selecionar(div);
 
-    if (selecionado !== null) {
-        selecionado.classList.remove('selecionado');
-        checkado.classList.remove('check');
-    }
-    bebida.classList.add('selecionado');
-    check.classList.add('check');
     nomeBebida = nome;
     precoBebida = preco.toFixed(2);
 
+    checkout();
+}
+
+function selecionarSobremesa(div, nome, preco) {
+    desmarcar('sobremesa');
+    selecionar(div);
+
+    nomeSobremesa = nome;
+    precoSobremesa = preco.toFixed(2);
 
     checkout();
 }
 
-function selecionarSobremesa(sobremesaEscolhida, nome, preco) {
-    let sobremesa = document.querySelector('.' + sobremesaEscolhida);
-    let selecionado = document.querySelector('.sobremesa .selecionado');
-    let checkado = document.querySelector('.sobremesa .check');
-    let check = document.querySelector('.' + sobremesaEscolhida + ' ion-icon');
-
-    if (selecionado !== null) {
-        selecionado.classList.remove('selecionado');
-        checkado.classList.remove('check');
-    }
-    sobremesa.classList.add('selecionado');
+function selecionar(div) {
+    div.classList.add('selecionado');
+    let check = div.querySelector('ion-icon');
     check.classList.add('check');
-    nomeSobremesa = nome;
-    precoSobremesa = preco.toFixed(2);
-    checkout();
 }
 
 function checkout() {
@@ -109,6 +91,15 @@ function pedir() {
 
     msg = encodeURIComponent('Olá, gostaria de fazer o pedido:' + '\n' + '- Prato: ' + nomePrato + '\n' + '- Bebida: ' + nomeBebida + '\n' + '- Sobremesa: ' + nomeSobremesa + '\n' + 'Total: R$ ' + soma.toFixed(2) + '\n' + '\n' + 'Nome: ' + nome + '\n' + 'Endereço: ' + endereco);
     window.open('https://wa.me/5544999931650?text=' + msg);
+}
+
+function desmarcar(item) {
+    let selecionado = document.querySelector('.' + item + ' .selecionado');
+    let checkado = document.querySelector('.' + item + ' .check');
+    if (selecionado !== null) {
+        selecionado.classList.remove('selecionado');
+        checkado.classList.remove('check');
+    }
 }
 
 function cancelar() {
